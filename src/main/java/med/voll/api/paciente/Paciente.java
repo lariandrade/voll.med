@@ -1,10 +1,9 @@
 package med.voll.api.paciente;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.*;
 import med.voll.api.endereco.Endereco;
-import med.voll.api.medico.DadosAtualizacaoMedico;
-import med.voll.api.medico.Especialidade;
 
 @Table(name = "pacientes")
 @Entity(name = "Paciente")
@@ -38,7 +37,7 @@ public class Paciente {
     }
 
 
-    public void atualizarInformacoes(DadosAtualizacaoMedico dados) {
+    public void atualizarInformacoes(@Valid DadosAtualizacaoPaciente dados) {
         if (dados.nome() != null){
             this.nome = dados.nome();
         }
