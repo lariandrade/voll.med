@@ -3,11 +3,15 @@ package med.voll.api.domain.consulta.validacoes;
 import med.voll.api.domain.ValidacaoException;
 import med.voll.api.domain.consulta.ConsultaRepository;
 import med.voll.api.domain.consulta.DadosAgendamentoConsulta;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-public class ValidadorPacienteComConsultaNaMesmaData {
+@Component
+public class ValidadorPacienteComConsultaNaMesmaData implements ValidadorAgendamentoDeConsulta {
 
     //Não permitir o agendamento de mais de uma consulta no mesmo dia para um mesmo paciente
 
+    @Autowired
     private ConsultaRepository consultaRepository;
 
     public void validar(DadosAgendamentoConsulta dados) {
