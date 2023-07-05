@@ -30,8 +30,6 @@ A documentação das funcionalidades da aplicação pode ser acessada neste link
 
 O projeto foi construído utilizando as seguintes ferramentas e tecnologias:
 
-As seguintes tecnologias foram utilizadas no desenvolvimento da API Rest do projeto:
-
 - **[Java 17](https://www.oracle.com/java)**
 - **[Spring Boot 3](https://spring.io/projects/spring-boot)**
 - **[Maven](https://maven.apache.org)**
